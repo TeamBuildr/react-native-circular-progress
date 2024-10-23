@@ -1,6 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { View, ViewPropTypes } from 'react-native';
+import { View } from 'react-native';
 import { Svg, Path, G } from 'react-native-svg';
 
 export default class CircularProgress extends React.PureComponent {
@@ -130,25 +129,26 @@ export default class CircularProgress extends React.PureComponent {
   }
 }
 
-CircularProgress.propTypes = {
-  style: ViewPropTypes.style,
-  size: PropTypes.number.isRequired,
-  fill: PropTypes.number.isRequired,
-  width: PropTypes.number.isRequired,
-  backgroundWidth: PropTypes.number,
-  tintColor: PropTypes.string,
-  tintTransparency: PropTypes.bool,
-  backgroundColor: PropTypes.string,
-  rotation: PropTypes.number,
-  lineCap: PropTypes.string,
-  arcSweepAngle: PropTypes.number,
-  children: PropTypes.func,
-  childrenContainerStyle: ViewPropTypes.style,
-  padding: PropTypes.number,
-  renderCap: PropTypes.func,
-  dashedBackground: PropTypes.object,
-  dashedTint: PropTypes.object
-};
+// for type reference but propTypes are deprecated
+// CircularProgress.propTypes = {
+//   style: ViewStyle,
+//   size: PropTypes.number.isRequired,
+//   fill: PropTypes.number.isRequired,
+//   width: PropTypes.number.isRequired,
+//   backgroundWidth: PropTypes.number,
+//   tintColor: PropTypes.string,
+//   tintTransparency: PropTypes.bool,
+//   backgroundColor: PropTypes.string,
+//   rotation: PropTypes.number,
+//   lineCap: PropTypes.string,
+//   arcSweepAngle: PropTypes.number,
+//   children: PropTypes.func,
+//   childrenContainerStyle: ViewStyle,
+//   padding: PropTypes.number,
+//   renderCap: PropTypes.func,
+//   dashedBackground: PropTypes.object,
+//   dashedTint: PropTypes.object
+// };
 
 CircularProgress.defaultProps = {
   tintColor: 'black',

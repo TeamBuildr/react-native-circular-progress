@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Animated, Easing } from 'react-native';
 import CircularProgress from './CircularProgress';
 const AnimatedProgress = Animated.createAnimatedComponent(CircularProgress);
@@ -72,14 +71,15 @@ export default class AnimatedCircularProgress extends React.PureComponent {
   }
 }
 
-AnimatedCircularProgress.propTypes = {
-  ...CircularProgress.propTypes,
-  prefill: PropTypes.number,
-  duration: PropTypes.number,
-  easing: PropTypes.func,
-  onAnimationComplete: PropTypes.func,
-  useNativeDriver: PropTypes.bool,
-};
+// for type reference but propTypes are deprecated
+// AnimatedCircularProgress.propTypes = {
+//   ...CircularProgress.propTypes,
+//   prefill: PropTypes.number,
+//   duration: PropTypes.number,
+//   easing: PropTypes.func,
+//   onAnimationComplete: PropTypes.func,
+//   useNativeDriver: PropTypes.bool,
+// };
 
 AnimatedCircularProgress.defaultProps = {
   duration: 500,
